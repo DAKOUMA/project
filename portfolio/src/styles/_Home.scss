@@ -1,0 +1,100 @@
+@mixin cercle-progress($deg) {
+    background: conic-gradient( #99c9c4 $deg, #ececec 0deg);
+}
+
+.principal{
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff;
+}
+
+.homepage{
+    position: relative;
+}
+
+.homepage-social_link:hover{
+    > i{
+        transition: 200ms;
+        transform: scale(1.3);
+    }
+}
+
+.homepage-social_link:active{
+    > i{
+        color: white;
+    }
+}
+
+.preview{
+    box-shadow: inset $shadowGrey -1px -1px 3px 0px;
+    background: $grey;
+    &-card{
+        background: white;
+        border-radius: 5px;
+        box-shadow: $shadowGrey -1px -1px 3px 0px
+    }
+}
+
+
+.skills-list{
+    & li:nth-child(1) {
+        @include cercle-progress(90%)
+    }
+    & li:nth-child(2) {
+        @include cercle-progress(90%)
+    }
+    & li:nth-child(3) {
+        @include cercle-progress(75%)
+    }
+    & li:nth-child(4) {
+        @include cercle-progress(80%)
+    }
+    & li:nth-child(5) {
+        @include cercle-progress(75%)
+    }
+    & li:nth-child(6) {
+        @include cercle-progress(75%)
+    }
+
+}
+
+.skills-container{
+    width: 90px;
+    height: 90px;
+    box-shadow: inset $shadowGrey -1px -1px 3px 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before{
+        content: "";
+        box-shadow: $shadowGrey -1px -1px 3px 0px;
+        position: absolute;
+        width: 6rem;
+        height: 6rem;
+        background-color: white;
+        border-radius: 50%;
+    }
+}
+
+.skills-image{
+    position: relative;
+
+    z-index: 2;
+}
+
+.portfolio{
+    box-shadow: inset $shadowGrey -1px -1px 3px 0px;
+    background: $grey;
+    &-card{
+        background: white;
+        border-radius: 5px;
+        box-shadow: $shadowGrey -1px -1px 3px 0px
+    }
+}
+
+textarea{
+    border-radius: 5px;
+    background-color: green;
+}
+
